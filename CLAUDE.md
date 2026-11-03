@@ -18,6 +18,19 @@
 - Презентация — фиксированный слой `#pres` (не `<dialog>`): fullscreen запрашивается на нём самом.
   Если перевести в fullscreen весь документ, он перекроет слайды.
 
+## Хостинг и деплой
+- Cloudflare Worker **`alco`** (аккаунт imakanovr), адрес https://alco.imakanovr.workers.dev.
+  Worker отдаёт статику через binding `ASSETS` и добавляет заголовки `X-Robots-Tag: noindex`,
+  `nosniff`, `Referrer-Policy`. Wrangler и Workers Builds не настроены: push в GitHub сам не деплоит.
+- Деплой через MCP Cloudflare (`execute`), без токена аккаунта в песочнице:
+  1) `POST /accounts/{id}/workers/scripts/alco/assets-upload-session` с манифестом
+     `{"/index.html": {hash, size}}` (hash — первые 32 hex от sha256(base64(файл) + "html"));
+  2) из песочницы `POST https://api.cloudflare.com/client/v4/accounts/{id}/workers/assets/upload?base64=true`
+     с JWT сессии, поле формы = hash, значение = base64 файла (`curl -F "<hash>=<idx.b64;type=text/html"`);
+  3) `PUT /accounts/{id}/workers/scripts/alco` (multipart: metadata с `assets.jwt` = токен завершения,
+     binding `{type:"assets", name:"ASSETS"}`, `main_module: worker.js`) — код воркера выше.
+  Если buckets в ответе шага 1 пустые, файл уже загружен — сразу шаг 3 с JWT сессии.
+
 ## Решения (не ломать)
 - Конфетти («дождик») убраны по просьбе заказчика — не возвращать.
 - Разделы «Правила дизайна» и «Источники» со страницы убраны по просьбе заказчика.
