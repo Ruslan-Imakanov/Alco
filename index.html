@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Каталог «Дәстүр»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700;900&family=Forum&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+/* Layout: страница как сырмақ — центральное поле с бордюрами из бегущего орнамента между разделами; ночь степи, войлок и золото */
+:root{
+  color-scheme: dark;
+  --night:#0A1424;
+  --night-2:#0F1D33;
+  --night-3:#16294A;
+  --felt:#EEE5D1;
+  --felt-2:#BFB6A3;
+  --felt-3:#8A8577;
+  --gold:#D6AA4E;
+  --gold-hi:#F4D88E;
+  --gold-lo:#8E6A27;
+  --ember:#D0573A;
+  --line:rgba(238,229,209,.13);
+  --line-2:rgba(214,170,78,.35);
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --f-serif:"Forum","Times New Roman",Georgia,serif;
+  --f-body:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--felt);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--gold-hi)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px;border-radius:6px}
+.eyebrow{font-family:var(--f-display);font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.kk{font-family:var(--f-serif)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-block:clamp(28px,6vw,72px) clamp(24px,4vw,40px);background:
+  radial-gradient(60% 70% at 78% 40%, rgba(40,78,150,.35), transparent 70%),
+  radial-gradient(40% 50% at 10% 0%, rgba(214,170,78,.10), transparent 70%);}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(20px,4vw,56px);align-items:center}
+.wordmark{font-family:var(--f-display);font-weight:900;font-size:clamp(44px,7.2vw,100px);line-height:.9;letter-spacing:-.025em;margin:18px 0 10px;
+  background:linear-gradient(100deg,var(--gold-lo) 0%,var(--gold) 25%,var(--gold-hi) 42%,#fff6dc 50%,var(--gold-hi) 58%,var(--gold) 75%,var(--gold-lo) 100%);
+  background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 9s ease-in-out infinite}
+@keyframes sheen{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.hero-sub{font-family:var(--f-serif);font-size:clamp(24px,3vw,34px);color:var(--felt);line-height:1.15}
+.hero-lede{max-width:52ch;color:var(--felt-2);margin-top:16px;font-size:17px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:12px 20px;border:1px solid var(--line-2);background:transparent;text-decoration:none;color:var(--felt);font-weight:500;transition:background .25s,border-color .25s,transform .25s}
+.btn:hover{border-color:var(--gold);background:rgba(214,170,78,.08)}
+.btn.primary{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1A1306;border-color:transparent}
+.btn.primary:hover{transform:translateY(-1px);background:linear-gradient(180deg,#FFE7A8,var(--gold-hi))}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;color:var(--felt-3);font-size:13px}
+.hero-meta b{color:var(--felt);font-weight:600;font-variant-numeric:tabular-nums}
+.stage{position:relative;width:100%;max-width:560px;justify-self:center;aspect-ratio:1/1}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
+.stage::before{content:"";position:absolute;inset:6%;border-radius:50%;border:1px dashed rgba(214,170,78,.22);animation:spin 120s linear infinite}
+.stage::after{content:"";position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(214,170,78,.10),transparent 65%)}
+.morph-cap{position:absolute;left:0;right:0;bottom:-6px;text-align:center;font-size:13px;color:var(--felt-2);min-height:3em}
+.morph-cap b{display:block;font-family:var(--f-serif);font-weight:400;font-size:22px;color:var(--gold-hi);letter-spacing:.02em}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- ornament band ---------- */
+.band{height:16px;margin-block:8px;opacity:.75}
+.band svg{display:block;width:100%;height:16px}
+
+/* ---------- filters ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(10,20,36,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-block:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:6px 13px;font-size:13px;color:var(--felt-2);transition:all .2s}
+.chip:hover{color:var(--felt);border-color:var(--line-2)}
+.chip[aria-pressed="true"]{background:var(--felt);color:var(--night);border-color:var(--felt)}
+.bar .sep{width:1px;height:22px;background:var(--line)}
+.bar .spacer{flex:1}
+.bar .btn{padding:7px 14px;font-size:13px}
+
+/* ---------- catalog ---------- */
+section{padding-block:clamp(36px,6vw,72px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 40px;align-items:end;margin-bottom:28px}
+.sec-head h2{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,3.6vw,42px);line-height:1.05;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{color:var(--felt-2);max-width:60ch}
+.group{margin-top:34px}
+.group-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px;margin-bottom:18px}
+.group-h h3{font-family:var(--f-serif);font-weight:400;font-size:28px;color:var(--felt)}
+.group-h span{color:var(--felt-3);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{display:flex;flex-direction:column;gap:14px;min-width:0}
+.sample{display:block;border:0;padding:0;background:none;perspective:1000px;width:100%}
+.tilt{position:relative;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s cubic-bezier(.2,.8,.2,1);border-radius:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04)}
+.sample:hover .tilt{transition:transform .12s linear}
+.tilt svg{display:block;width:100%;height:auto;border-radius:16px}
+.foil{position:absolute;inset:0;border-radius:16px;pointer-events:none;mix-blend-mode:soft-light;opacity:0;transition:opacity .4s;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,30%),rgba(255,246,214,.75),rgba(255,246,214,0) 42%),
+             linear-gradient(115deg,transparent 30%,rgba(140,220,255,.25) 45%,rgba(255,180,220,.22) 55%,transparent 70%)}
+.sample:hover .foil,.sample:focus-visible .foil{opacity:1}
+.c-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.c-name{font-family:var(--f-serif);font-weight:400;font-size:27px;line-height:1.1}
+.c-cat{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.c-type{color:var(--felt-2);font-size:14px;margin-top:2px}
+.c-spec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;border-block:1px solid var(--line);padding-block:10px}
+.c-spec div{min-width:0}
+.c-spec dt{font-size:11px;color:var(--felt-3);letter-spacing:.06em}
+.c-spec dd{margin:0;font-variant-numeric:tabular-nums;font-weight:500}
+.c-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.price{font-family:var(--f-display);font-weight:500;font-size:19px;font-variant-numeric:tabular-nums}
+.price small{display:block;font-family:var(--f-body);font-weight:400;font-size:12px;color:var(--felt-3)}
+.qty{display:flex;align-items:center;border:1px solid var(--line-2);border-radius:999px;overflow:hidden}
+.qty button{width:38px;height:38px;border:0;background:transparent;font-size:18px;color:var(--gold-hi)}
+.qty button:hover{background:rgba(214,170,78,.12)}
+.qty output{min-width:64px;text-align:center;font-variant-numeric:tabular-nums;font-size:13px}
+.more{background:none;border:0;padding:0;color:var(--gold-hi);font-size:14px;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-2);justify-self:start;text-align:left}
+.card[hidden]{display:none}
+
+/* svg label type */
+.t-brand{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.42em}
+.t-sub{font-family:var(--f-display);font-weight:500;font-size:6.2px;letter-spacing:.3em}
+.t-name{font-family:var(--f-serif);letter-spacing:.04em}
+.t-lat{font-family:var(--f-body);font-size:8.5px;letter-spacing:.3em}
+.t-type{font-family:var(--f-display);font-weight:500;font-size:7.2px;letter-spacing:.16em}
+.t-ru{font-family:var(--f-body);font-size:9.5px}
+.t-wish{font-family:var(--f-serif);font-size:12.5px}
+.t-meta{font-family:var(--f-display);font-weight:500;font-size:9px;letter-spacing:.08em}
+.t-age{font-family:var(--f-display);font-weight:700;font-size:7.5px}
+.draw path{stroke-dasharray:1 1;stroke-dashoffset:0}
+.draw.run path{animation:draw 1.9s cubic-bezier(.6,.05,.3,1) both;animation-delay:var(--d,0s)}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.spin{transform-box:fill-box;transform-origin:center;animation:spin 80s linear infinite}
+/* живой орнамент: свечение, бегущий свет, волны, кольца, параллакс */
+.emb{transform-box:fill-box;transform-origin:center;transition:transform 1s cubic-bezier(.2,.9,.25,1.2)}
+.emb .glow,.emb .flow,.emb .spin2,.emb .ripple{opacity:0;transition:opacity .7s}
+.emb .flow path{stroke-dasharray:.06 .94}
+.emb .spin2,.emb .ripple{transform-box:fill-box;transform-origin:center}
+.label .cr{transform-box:fill-box;transform-origin:center;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.label .t-wish{transition:filter .7s}
+:is(.sample:hover,.sample:focus-visible,.live,.lex-i:hover) .emb{transform:translate(calc(var(--px,0) * -5px),calc(var(--py,0) * -5px)) scale(1.07)}
+:is(.sample:hover,.sample:focus-visible,.live,.lex-i:hover) .emb .glow{opacity:.6;animation:breathe 3s ease-in-out infinite}
+:is(.sample:hover,.sample:focus-visible,.live,.lex-i:hover) .emb .flow{opacity:1}
+:is(.sample:hover,.sample:focus-visible,.live,.lex-i:hover) .emb .flow path{animation:flow 3.4s linear infinite;animation-delay:var(--fd,0s)}
+:is(.sample:hover,.sample:focus-visible,.live,.lex-i:hover) .emb .spin2{opacity:.75;animation:spin 26s linear infinite reverse}
+:is(.sample:hover,.sample:focus-visible,.live,.lex-i:hover) .emb .ripple{animation:ripple 2.8s cubic-bezier(.2,.6,.3,1) infinite}
+:is(.sample:hover,.sample:focus-visible,.live,.lex-i:hover) .emb .ripple.r2{animation-delay:1.4s}
+:is(.sample:hover,.sample:focus-visible,.live) .label .cr{transform:rotate(90deg)}
+:is(.sample:hover,.sample:focus-visible,.live) .label .t-wish{filter:drop-shadow(0 0 3px rgba(244,216,142,.6))}
+@keyframes flow{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes breathe{0%,100%{opacity:.3}50%{opacity:.85}}
+@keyframes ripple{0%{opacity:0;transform:scale(.88)}18%{opacity:.85}100%{opacity:0;transform:scale(1.24)}}
+
+/* ---------- lexicon ---------- */
+.lex{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lex-i{background:var(--night);padding:22px 20px 24px;display:grid;gap:10px;align-content:start;min-width:0}
+.lex-i svg{width:96px;height:96px}
+.lex-i h3{font-family:var(--f-serif);font-weight:400;font-size:24px}
+.lex-i .ru{color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.lex-i p{color:var(--felt-2);font-size:14px}
+.lex-i .use{font-size:12px;color:var(--felt-3)}
+.lex-i svg{overflow:visible}
+.lex-i{transition:background .5s}
+.lex-i:hover{background:radial-gradient(80% 60% at 30% 20%,rgba(214,170,78,.09),transparent 70%),var(--night)}
+
+/* ---------- palette ---------- */
+.pal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.sw{display:grid;gap:8px;min-width:0}
+.sw i{display:block;aspect-ratio:1/1.15;max-width:100%;border-radius:12px;border:1px solid var(--line);position:relative;overflow:hidden}
+.sw i::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.18),transparent 45%)}
+.sw b{font-family:var(--f-serif);font-weight:400;font-size:22px}
+.sw span{color:var(--felt-2);font-size:13px}
+
+/* ---------- rules ---------- */
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.rule{border:1px solid var(--line);border-radius:var(--r);padding:22px;min-width:0;background:linear-gradient(180deg,rgba(22,41,74,.5),rgba(10,20,36,0))}
+.rule h3{font-family:var(--f-display);font-weight:500;font-size:15px;letter-spacing:.02em;margin-bottom:12px;color:var(--gold-hi)}
+.rule ul{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--felt-2);font-size:14.5px}
+.rule li::marker{color:var(--gold)}
+.note{margin-top:14px;font-size:13px;color:var(--felt-3)}
+.sources{columns:2;column-gap:40px;font-size:14px;color:var(--felt-2);margin:0;padding-left:18px}
+.sources li{break-inside:avoid;margin-bottom:6px}
+footer{border-top:1px solid var(--line);padding-block:28px 120px;color:var(--felt-3);font-size:13px}
+
+/* ---------- dialogs ---------- */
+dialog{border:0;padding:0;color:var(--felt);background:transparent;max-width:none;max-height:none}
+dialog::backdrop{background:rgba(4,9,18,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.sheet{width:min(1120px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;background:var(--night-2);border:1px solid var(--line);border-radius:20px;margin:auto}
+.sheet-in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:0}
+.sh-stage{position:relative;background:radial-gradient(70% 60% at 50% 40%,var(--glow,rgba(40,78,150,.4)),transparent 75%),var(--night);padding:26px;display:grid;gap:16px;align-content:start;border-right:1px solid var(--line)}
+.seg{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px;justify-self:center}
+.seg button{border:0;background:transparent;border-radius:999px;padding:6px 12px;font-size:13px;color:var(--felt-2)}
+.seg button[aria-pressed="true"]{background:var(--felt);color:var(--night)}
+.view{display:grid;place-items:center;min-height:420px;perspective:1100px}
+.view .tilt{width:min(100%,330px);box-shadow:none}
+.view .bottle-w{width:min(100%,250px);transform:rotateY(var(--ry,0deg));transition:transform .4s}
+.view svg.bottle{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.back{width:min(100%,330px);aspect-ratio:3/4;border-radius:16px;padding:22px 22px 18px;background:var(--bb);color:var(--bi);display:flex;flex-direction:column;gap:9px;font-size:10.5px;line-height:1.4;position:relative;overflow:hidden}
+.back::before{content:"";position:absolute;inset:8px;border:1px solid var(--bm);border-radius:10px;opacity:.6;pointer-events:none}
+.back .bh{font-family:var(--f-display);font-weight:700;letter-spacing:.3em;font-size:10px;text-align:center}
+.back .bkk{font-family:var(--f-serif);font-size:12px}
+.back .warn{border:1px solid currentColor;border-radius:6px;padding:6px 8px;font-weight:600;font-size:9.5px}
+.back .brow{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.back .ukm{border:1px dashed currentColor;border-radius:4px;font-size:8px;padding:6px;width:70px;text-align:center;opacity:.8}
+.back .age{width:34px;height:34px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:10px}
+.back svg{width:112px;height:auto;background:#fff;border-radius:3px;padding:3px}
+.sh-info{padding:30px clamp(20px,3vw,40px) 30px;display:grid;gap:18px;align-content:start;min-width:0}
+.sh-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.x{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;font-size:20px;flex:none}
+.x:hover{border-color:var(--gold)}
+.sh-name{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-.01em}
+.sh-lat{color:var(--felt-3);letter-spacing:.2em;font-size:13px;margin-top:6px}
+.wish{font-family:var(--f-serif);font-size:24px;line-height:1.2;color:var(--gold-hi)}
+.wish small{display:block;font-family:var(--f-body);font-size:14px;color:var(--felt-2);margin-top:4px}
+.blk h4{margin:0 0 6px;font-family:var(--f-display);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.blk p{color:var(--felt-2);max-width:62ch}
+.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0}
+.specs div{padding:10px 14px;border-bottom:1px solid var(--line);min-width:0}
+.specs div:nth-child(odd){border-right:1px solid var(--line)}
+.specs dt{font-size:11px;color:var(--felt-3)}
+.specs dd{margin:0;font-size:14px;font-variant-numeric:tabular-nums}
+.sh-act{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.nav2{display:flex;gap:8px}
+
+/* presentation: отдельный полноэкранный слой, а не dialog */
+.pres{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;background:var(--night);color:var(--felt)}
+.pres-main{flex:1;min-height:0;overflow-y:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;gap:clamp(20px,4vw,64px);
+  padding:max(64px,calc(env(safe-area-inset-top,0px) + 56px)) max(28px,env(safe-area-inset-right,0px)) 20px max(28px,env(safe-area-inset-left,0px));
+  background:radial-gradient(45% 60% at 26% 50%,var(--glow,rgba(40,78,150,.4)),transparent 75%);transition:background .8s}
+.pres-l{display:grid;place-items:center;perspective:1200px}
+.pres-l .tilt{width:min(100%,60vh,440px)}
+.pres-r{display:grid;gap:16px;align-content:center;min-width:0;max-width:640px}
+.pres-n{font-family:var(--f-display);font-size:12px;letter-spacing:.3em;color:var(--felt-3)}
+.pres-name{font-family:var(--f-display);font-weight:900;font-size:clamp(34px,4.8vw,72px);line-height:1;letter-spacing:-.02em;background:linear-gradient(100deg,var(--gold),var(--gold-hi) 50%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.06em}
+.pres-r p{color:var(--felt-2);font-size:clamp(15px,1.3vw,18px);max-width:58ch}
+.pres-foot{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;border-top:1px solid var(--line);
+  padding:12px max(16px,env(safe-area-inset-right,0px)) max(14px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.pres-prog{position:absolute;left:0;right:0;top:-1px;height:2px}
+.pres-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi));transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.pres-dots{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;min-width:0}
+.pres-dots button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;padding:6px;transition:border-color .3s,background .3s}
+.pres-dots button[aria-current="true"]{border-color:var(--gold);background:rgba(214,170,78,.15)}
+.pres-dots svg{width:100%;height:100%;display:block}
+.pres-arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);background:transparent;font-size:18px;flex:none}
+.pres-arrow:hover{border-color:var(--gold);background:rgba(214,170,78,.1)}
+.pres-x{position:absolute;z-index:2;top:max(14px,calc(env(safe-area-inset-top,0px) + 10px));right:max(14px,calc(env(safe-area-inset-right,0px) + 10px))}
+.pres-hint{position:absolute;z-index:2;top:max(24px,calc(env(safe-area-inset-top,0px) + 20px));left:max(28px,env(safe-area-inset-left,0px));font-size:12px;color:var(--felt-3);letter-spacing:.08em}
+
+/* order */
+.obar{position:fixed;left:0;right:0;bottom:0;z-index:25;background:rgba(15,29,51,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line-2);padding-bottom:env(safe-area-inset-bottom,0px);transform:translateY(0);transition:transform .35s}
+.obar-in{display:flex;align-items:center;gap:14px;padding-block:10px;flex-wrap:wrap}
+.obar b{font-variant-numeric:tabular-nums}
+.obar .sum{font-family:var(--f-display);font-weight:500;font-variant-numeric:tabular-nums}
+.obar .spacer{flex:1}
+.osheet{width:min(720px,calc(100vw - 24px))}
+.osheet .sh-info{padding:26px}
+.otable-w{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.otable{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.otable th,.otable td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.otable th:first-child,.otable td:first-child{text-align:left}
+.otable th{font-weight:500;font-size:12px;color:var(--felt-3)}
+.otable tfoot td{font-weight:600;border-bottom:0}
+#orderText{width:100%;min-height:120px;background:var(--night);color:var(--felt);border:1px solid var(--line);border-radius:10px;padding:10px;font:13px/1.5 var(--f-body);resize:vertical}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--felt);color:var(--night);padding:9px 16px;border-radius:999px;font-size:14px;z-index:60;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.on{opacity:1}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .grid{gap:14px}
+  .c-name{font-size:23px}
+  .lex{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pal{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rules{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .stage{max-width:420px}
+  .sec-head{grid-template-columns:minmax(0,1fr)}
+  .sheet-in{grid-template-columns:minmax(0,1fr)}
+  .sh-stage{border-right:0;border-bottom:1px solid var(--line)}
+  .view{min-height:340px}
+  .pres-main{grid-template-columns:minmax(0,1fr);align-items:start;align-content:start}
+  .pres-l .tilt{width:min(72vw,42vh,320px)}
+  .pres-hint{display:none}
+}
+@media (max-width:700px){
+  .grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin-inline:-4px;padding-inline:4px}
+  .grid .card{flex:0 0 80%;scroll-snap-align:center}
+  .bar .sep{display:none}
+  .bar-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:8px}
+  .bar-in::-webkit-scrollbar{display:none}
+  .bar .chips{flex-wrap:nowrap}
+  .chip{white-space:nowrap}
+  #presBtn2,.bar .spacer{display:none}
+}
+@media (max-width:480px){
+  .lex{grid-template-columns:minmax(0,1fr)}
+  .pal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wordmark{font-size:clamp(40px,15vw,72px)}
+  .pres-dots{gap:4px;flex-wrap:nowrap}
+  .pres-dots button{width:26px;height:26px;padding:4px;flex:none}
+  .pres-arrow{width:36px;height:36px}
+  .pres-foot{gap:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<!-- общие градиенты, текстуры и бордюры для всех этикеток -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" id="defs">
+  <defs>
+    <linearGradient id="mg-gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="400">
+      <stop offset="0" stop-color="#9C7630"/><stop offset=".38" stop-color="#D6AA4E"/><stop offset=".47" stop-color="#F4D88E"/><stop offset=".5" stop-color="#FFF6DA"/><stop offset=".53" stop-color="#F4D88E"/><stop offset=".62" stop-color="#C99A3E"/><stop offset="1" stop-color="#9C7630"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-260 -340;260 340;-260 -340" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="mm-gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0" stop-color="#B08638"/><stop offset=".4" stop-color="#E0B75C"/><stop offset=".5" stop-color="#FFF3CF"/><stop offset=".6" stop-color="#E0B75C"/><stop offset="1" stop-color="#B08638"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-90 -90;90 90;-90 -90" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="mg-silver" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="400">
+      <stop offset="0" stop-color="#8E96A3"/><stop offset=".42" stop-color="#C9CFD8"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset=".58" stop-color="#C9CFD8"/><stop offset="1" stop-color="#8E96A3"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-260 -340;260 340;-260 -340" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="mm-silver" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0" stop-color="#A3AAB5"/><stop offset=".45" stop-color="#DCE1E8"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#DCE1E8"/><stop offset="1" stop-color="#A3AAB5"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-90 -90;90 90;-90 -90" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="mg-lapis" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="400">
+      <stop offset="0" stop-color="#0C2352"/><stop offset=".42" stop-color="#173C82"/><stop offset=".5" stop-color="#3F6FC8"/><stop offset=".58" stop-color="#173C82"/><stop offset="1" stop-color="#0C2352"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-260 -340;260 340;-260 -340" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="mm-lapis" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0" stop-color="#0E2A62"/><stop offset=".45" stop-color="#1B4596"/><stop offset=".5" stop-color="#4A7BD6"/><stop offset=".55" stop-color="#1B4596"/><stop offset="1" stop-color="#0E2A62"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-90 -90;90 90;-90 -90" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="mg-bronze" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="400">
+      <stop offset="0" stop-color="#6B4D17"/><stop offset=".42" stop-color="#9A7230"/><stop offset=".5" stop-color="#D8AE5A"/><stop offset=".58" stop-color="#9A7230"/><stop offset="1" stop-color="#6B4D17"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-260 -340;260 340;-260 -340" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="mm-bronze" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+      <stop offset="0" stop-color="#6B4D17"/><stop offset=".45" stop-color="#9A7230"/><stop offset=".5" stop-color="#D8AE5A"/><stop offset=".55" stop-color="#9A7230"/><stop offset="1" stop-color="#6B4D17"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-90 -90;90 90;-90 -90" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.4"/></filter>
+    <pattern id="felt"patternUnits="userSpaceOnUse" width="128" height="128"><image id="feltImg" width="128" height="128"/></pattern>
+    <pattern id="band-gold" patternUnits="userSpaceOnUse" width="22" height="14"><path d="M0 11.5 C4 11.5 6 9 6 6.2 C6 3.4 8.6 2 11 2 C13.4 2 16 3.4 16 6.2 C16 9 18 11.5 22 11.5 M6 6.2 C6 8.4 8.2 9.2 9.3 7.6 M16 6.2 C16 8.4 13.8 9.2 12.7 7.6" fill="none" stroke="#D6AA4E" stroke-width=".9"/></pattern>
+    <pattern id="band-silver" patternUnits="userSpaceOnUse" width="22" height="14"><path d="M0 11.5 C4 11.5 6 9 6 6.2 C6 3.4 8.6 2 11 2 C13.4 2 16 3.4 16 6.2 C16 9 18 11.5 22 11.5 M6 6.2 C6 8.4 8.2 9.2 9.3 7.6 M16 6.2 C16 8.4 13.8 9.2 12.7 7.6" fill="none" stroke="#C9CFD8" stroke-width=".9"/></pattern>
+    <pattern id="band-lapis" patternUnits="userSpaceOnUse" width="22" height="14"><path d="M0 11.5 C4 11.5 6 9 6 6.2 C6 3.4 8.6 2 11 2 C13.4 2 16 3.4 16 6.2 C16 9 18 11.5 22 11.5 M6 6.2 C6 8.4 8.2 9.2 9.3 7.6 M16 6.2 C16 8.4 13.8 9.2 12.7 7.6" fill="none" stroke="#173C82" stroke-width=".9"/></pattern>
+    <pattern id="band-bronze" patternUnits="userSpaceOnUse" width="22" height="14"><path d="M0 11.5 C4 11.5 6 9 6 6.2 C6 3.4 8.6 2 11 2 C13.4 2 16 3.4 16 6.2 C16 9 18 11.5 22 11.5 M6 6.2 C6 8.4 8.2 9.2 9.3 7.6 M16 6.2 C16 8.4 13.8 9.2 12.7 7.6" fill="none" stroke="#8E6A27" stroke-width=".9"/></pattern>
+    <pattern id="band-page" patternUnits="userSpaceOnUse" width="33" height="16"><path d="M0 13.5 C6 13.5 9 10.5 9 7 C9 3.6 12.8 2 16.5 2 C20.2 2 24 3.6 24 7 C24 10.5 27 13.5 33 13.5 M9 7 C9 9.8 12 10.8 13.6 8.8 M24 7 C24 9.8 21 10.8 19.4 8.8" fill="none" stroke="#D6AA4E" stroke-width="1"/></pattern>
+  </defs>
+</svg>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Каталог торгового представителя · сезон 2026/27</div>
+      <h1 class="wordmark">ДӘСТҮР</h1>
+      <p class="hero-sub">Коллекция «Той» — девять напитков, девять обычаев</p>
+      <p class="hero-lede">Каждая этикетка рассказывает один казахский обряд: свой орнамент, свой цвет-смысл и своё пожелание. Ею можно открыть разговор с байером: у каждой бутылки есть история, которую легко пересказать за минуту.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#catalog">Смотреть коллекцию</a>
+        <button class="btn" type="button" id="presBtn">▶ Режим презентации</button>
+      </div>
+      <div class="hero-meta">
+        <span><b>9</b> позиций</span><span><b>5</b> категорий</span><span><b>8</b> орнаментов</span><span>Казахский и русский на каждой этикетке</span>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <canvas id="hero" aria-hidden="true"></canvas>
+      <div class="morph-cap" id="morphCap" aria-live="polite"><b>Шаңырақ</b>венец юрты — символ дома и рода</div>
+    </div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <div class="chips" id="fCat" role="group" aria-label="Категория"></div>
+    <span class="sep" aria-hidden="true"></span>
+    <div class="chips" id="fGroup" role="group" aria-label="Повод"></div>
+    <span class="spacer"></span>
+    <button class="btn" type="button" id="presBtn2">▶ Презентация</button>
+  </div>
+</div>
+
+<main>
+  <section id="catalog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Коллекция «Той» · Той жинағы</div><h2>Девять этикеток — от сватовства до Наурыза</h2></div>
+        <p>Нажмите на этикетку, чтобы открыть легенду обряда, контрэтикетку и бутылку. Количество задаётся в коробках, заявка собирается внизу экрана.</p>
+      </div>
+      <div id="groups"></div>
+    </div>
+  </section>
+
+  <div class="wrap band" aria-hidden="true"><svg><rect width="100%" height="16" fill="url(#band-page)"/></svg></div>
+
+  <section id="lexicon">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Ою-өрнек</div><h2>Азбука орнамента</h2></div>
+        <p>Эмблема каждой этикетки собрана из традиционных мотивов. Значения приведены по народным толкованиям; происхождение многих знаков исследователи до сих пор обсуждают.</p>
+      </div>
+      <div class="lex" id="lex"></div>
+    </div>
+  </section>
+
+  <section id="palette">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow">Түс</div><h2>Цвет как смысл</h2></div>
+        <p>В традиционном изделии обычно два-три цвета, и у каждого своё значение. Фон этикетки выбирается по смыслу обряда, а металл (золото, серебро, лазурь, бронза) — по контрасту с фоном.</p>
+      </div>
+      <div class="pal" id="pal"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Концепт-дизайн для каталога торгового представителя. Бренд «Дәстүр», производитель, цены и штрихкоды условные и показаны для примера.</div>
+</footer>
+
+<div class="obar" id="obar" hidden>
+  <div class="wrap obar-in">
+    <span>Заявка: <b id="oBoxes">0</b> кор. · <b id="oBottles">0</b> бут.</span>
+    <span class="sum" id="oSum">0 ₸</span>
+    <span class="spacer"></span>
+    <button class="btn primary" type="button" id="oOpen">Открыть заявку</button>
+  </div>
+</div>
+
+<dialog id="dlg" aria-labelledby="shName">
+  <div class="sheet"><div class="sheet-in">
+    <div class="sh-stage" id="shStage">
+      <div class="seg" role="group" aria-label="Вид">
+        <button type="button" data-v="label" aria-pressed="true">Этикетка</button>
+        <button type="button" data-v="bottle" aria-pressed="false">Бутылка</button>
+        <button type="button" data-v="back" aria-pressed="false">Контрэтикетка</button>
+      </div>
+      <div class="view" id="shView"></div>
+    </div>
+    <div class="sh-info">
+      <div class="sh-top">
+        <div><div class="eyebrow" id="shCat"></div><h2 class="sh-name" id="shName"></h2><div class="sh-lat" id="shLat"></div></div>
+        <button class="x" type="button" data-close aria-label="Закрыть">×</button>
+      </div>
+      <p class="wish" id="shWish"></p>
+      <div class="blk"><h4>Обряд</h4><p id="shRite"></p></div>
+      <div class="blk"><h4>Орнамент и цвет</h4><p id="shOrn"></p></div>
+      <dl class="specs" id="shSpecs"></dl>
+      <div class="sh-act">
+        <div class="qty" id="shQty"></div>
+        <div class="nav2"><button class="btn" type="button" id="shPrev" aria-label="Предыдущая позиция">←</button><button class="btn" type="button" id="shNext" aria-label="Следующая позиция">→</button></div>
+      </div>
+    </div>
+  </div></div>
+</dialog>
+
+<div id="pres" class="pres" role="dialog" aria-modal="true" aria-label="Презентация коллекции" hidden>
+  <div class="pres-hint">← → листать · Esc — выйти</div>
+  <button class="x pres-x" type="button" id="pClose" aria-label="Закрыть презентацию">×</button>
+  <div class="pres-main" id="presMain">
+    <div class="pres-l"><div class="tilt live" id="presLabel"></div></div>
+    <div class="pres-r" id="presR"></div>
+  </div>
+  <div class="pres-foot">
+    <div class="pres-prog" aria-hidden="true"><i id="presProg"></i></div>
+    <button class="pres-arrow" type="button" id="pPrev" aria-label="Предыдущая позиция">←</button>
+    <div class="pres-dots" id="presDots"></div>
+    <button class="pres-arrow" type="button" id="pNext" aria-label="Следующая позиция">→</button>
+  </div>
+</div>
+
+<dialog id="order" aria-labelledby="oTitle">
+  <div class="sheet osheet"><div class="sh-info">
+    <div class="sh-top"><div><div class="eyebrow">Тапсырыс</div><h2 class="sh-name" id="oTitle" style="font-size:30px">Заявка</h2></div><button class="x" type="button" data-close aria-label="Закрыть">×</button></div>
+    <div class="otable-w"><table class="otable"><thead><tr><th>Позиция</th><th>Коробок</th><th>Бутылок</th><th>Сумма, ₸</th></tr></thead><tbody id="oBody"></tbody><tfoot><tr><td>Итого</td><td id="oFBox"></td><td id="oFBot"></td><td id="oFSum"></td></tr></tfoot></table></div>
+    <label for="orderText" class="eyebrow">Текст для мессенджера или почты</label>
+    <textarea id="orderText" readonly></textarea>
+    <div class="sh-act">
+      <button class="btn primary" type="button" id="oCopy">Скопировать заявку</button>
+      <button class="btn" type="button" id="oClear">Очистить</button>
+    </div>
+    <p class="note">Цены условные, показаны для демонстрации расчёта.</p>
+  </div></div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(() => {
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HOVER = matchMedia('(hover: hover) and (pointer: fine)').matches;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const fmt = n => n.toLocaleString('ru-RU');
+
+/* ================= данные ================= */
+const CATS = {vodka:'Водка', cognac:'Коньяк', bitter:'Настойка', wine:'Вино', sparkling:'Игристое'};
+const GROUPS = {
+  home:['Дом и гости','шанырак, гостеприимство и соседство'],
+  wedding:['Свадебный цикл','от сватовства до открытия лица невесты'],
+  feast:['Праздник и весть','весна, добрая новость и шашу']
+};
+const P = [
+ {id:'shanyrak', name:'Шаңырақ', kk:'ШАҢЫРАҚ', lat:'Şañyraq', cat:'vodka', group:'home', bottle:'vodka', vol:'0,7', abv:40, pack:12, price:8400,
+  type_kk:'ПРЕМИУМ АРАҚ', type_ru:'Водка премиальная', base:'#1D4C9C', base2:'#0B2152', metal:'gold', ink:'#F4ECD8', motif:'shanyrak', glass:['#5E7C92','#CFE2EC','#6D8BA0'],
+  wish:'Шаңырағың биік болсын!', wish_ru:'Пусть твой шанырак стоит высоко!',
+  rite:'Шаңырақ — венец юрты, деревянный круг, через который видно небо. Его не продают и не выбрасывают: родительский шанырак (қара шаңырақ) переходит к младшему сыну, который остаётся в отчем доме. Поэтому слово «шаңырақ» означает саму семью и род, а пожелание «Шаңырағың биік болсын» говорят молодым и новосёлам.',
+  orn:'Стилизованный шаңырақ: два круга, перекрещённые дуги-күлдіреуіш и 24 луча-уыка. Синий (көк) — небо над юртой; золото — достаток дома.',
+  comp:'спирт этиловый ректификованный «Люкс» из пшеницы, вода питьевая подготовленная, настой овсяных хлопьев', pair:'қазы, жал-жая, сүр ет'},
+ {id:'konakasy', name:'Қонақасы', kk:'ҚОНАҚАСЫ', lat:'Qonaqasy', cat:'vodka', group:'home', bottle:'vodka', vol:'0,5', abv:40, pack:12, price:4900,
+  type_kk:'АРАҚ', type_ru:'Водка', base:'#A8432C', base2:'#4E170E', metal:'gold', ink:'#F6E7D0', motif:'tuyetaban', glass:['#5E7C92','#CFE2EC','#6D8BA0'],
+  wish:'Қонақ келсе — құт келер', wish_ru:'Придёт гость — придёт благодать',
+  rite:'Қонақасы — угощение гостя. Путник в степи мог зайти в любую юрту и получить еду и ночлег. Гостю отдают төр — почётное место напротив входа, подают кумыс и мясо; почётному гостю дарили коня или накидывали на плечи чапан, а старший в доме благословлял его в дорогу.',
+  orn:'Түйе табан — «след верблюда»: дорога, выносливость и долгий путь, которым гость пришёл к дастархану. Красный (қызыл) — огонь очага.',
+  comp:'спирт этиловый ректификованный «Люкс», вода питьевая подготовленная', pair:'ет (бешбармак), баурсаки'},
+ {id:'erulik', name:'Ерулік', kk:'ЕРУЛІК', lat:'Erulık', cat:'vodka', group:'home', bottle:'vodka', vol:'1,0', abv:40, pack:6, price:8900,
+  type_kk:'ЖҰМСАҚ АРАҚ', type_ru:'Водка мягкая', base:'#157D7A', base2:'#063A3A', metal:'gold', ink:'#EAF4EE', motif:'tumarsha', glass:['#5E7C92','#CFE2EC','#6D8BA0'],
+  wish:'Жаңа үйлерің құтты болсын!', wish_ru:'Пусть новый дом будет благословенным!',
+  rite:'Когда в аул переезжает новая семья, соседи сами приходят к ней с угощением — кониной, казы-карта, жал-жая — и помогают обжиться. Так новосёлы быстрее привыкают к месту и становятся своими.',
+  orn:'Тұмарша — треугольный амулет: оберег нового дома от бед. Бирюза — небо и вода, цвет покоя.',
+  comp:'спирт этиловый ректификованный «Альфа», вода питьевая подготовленная, сахар', pair:'қуырдақ, қазы-қарта'},
+ {id:'kudalyk', name:'Құдалық', kk:'ҚҰДАЛЫҚ', lat:'Qūdalyq', cat:'cognac', group:'wedding', bottle:'cognac', vol:'0,5', abv:40, pack:12, price:11500,
+  type_kk:'КОНЬЯК · 5 ЖЫЛ', type_ru:'Коньяк пятилетний', base:'#7A4A1E', base2:'#2E180A', metal:'gold', ink:'#F5E6C8', motif:'kudalyk', glass:['#4A2208','#C57A2A','#5A2A08'],
+  wish:'Құда мың жылдық', wish_ru:'Сваты — на тысячу лет',
+  rite:'Сватовство — официальное знакомство двух семей. Сватам подают құйрық-бауыр, курдючное сало с печенью: его едят вместе, и это знак, что семьи отныне связаны. Когда стороны договорились, невесте надевают серьги — сырға салу означает окончательное согласие.',
+  orn:'Две пары бараньих рогов (қошқар мүйіз), обращённые друг к другу: два рода и общий достаток. Қошқар мүйіз называют «отцом» казахских орнаментов.',
+  comp:'коньячный дистиллят выдержкой не менее 5 лет, вода подготовленная, колер сахарный', pair:'құйрық-бауыр, сыр, грецкий орех'},
+ {id:'kyzuzatu', name:'Қыз ұзату', kk:'ҚЫЗ ҰЗАТУ', lat:'Qyz ūzatu', cat:'wine', group:'wedding', bottle:'wine', vol:'0,75', abv:13, pack:6, price:8200,
+  type_kk:'ҚЫЗЫЛ ҚҰРҒАҚ ШАРАП', type_ru:'Вино красное сухое · Саперави', base:'#8E1838', base2:'#3A0716', metal:'gold', ink:'#F8E6EA', motif:'botakoz', glass:['#0C2418','#2D5A3E','#0A1C12'],
+  wish:'Бақытты бол, қарағым!', wish_ru:'Будь счастлива, родная!',
+  rite:'Проводы невесты из родительского дома — отдельный той у её семьи. Подруги поют «Жар-жар», невеста прощается с домом песней-плачем «Сыңсу», и её провожают в дорогу с приданым (жасау). Родным жениха перед этим дарят подарки — киіт.',
+  orn:'Ботакөз — «глаз верблюжонка»: удача и защита от сглаза в дороге. По диагоналям — малые бараньи рога. Багряный — цвет свадебного наряда.',
+  comp:'виноград Саперави (Алматинская обл.), консервант E220', pair:'қуырдақ из баранины, шашлык'},
+ {id:'betashar', name:'Беташар', kk:'БЕТАШАР', lat:'Betaşar', cat:'wine', group:'wedding', bottle:'wine', vol:'0,75', abv:12, pack:6, price:6900,
+  type_kk:'ҚЫЗҒЫЛТ ШАРАП', type_ru:'Вино розовое полусухое', base:'#B84A6A', base2:'#561528', metal:'silver', ink:'#FBEFF2', motif:'kustumsyk', glass:['#7A3346','#E7A3B2','#8A3A50'],
+  wish:'Төрт құбылаң тең болсын!', wish_ru:'Пусть все четыре стороны жизни будут в равновесии!',
+  rite:'Обряд открытия лица невесты в доме жениха. Акын поёт назидательную песню и по очереди называет родню мужа, а невеста кланяется каждому — «сәлем салу». Покрывало поднимают, и родственники кладут подарки и деньги на поднос.',
+  orn:'Құстұмсық — «клюв птицы», семейный узор: клюв, поднятый вверх, означает, что в новой семье невестку ценят и любят. Серебро — серьги и украшения невесты.',
+  comp:'виноград Каберне и Ркацители, консервант E220', pair:'жент, баурсаки, фруктовый дастархан'},
+ {id:'suiinshi', name:'Сүйінші', kk:'СҮЙІНШІ', lat:'Süiınşı', cat:'bitter', group:'feast', bottle:'bitter', vol:'0,5', abv:38, pack:12, price:5600,
+  type_kk:'АЩЫ ТҰНДЫРМА', type_ru:'Настойка горькая на степных травах', base:'#D9A21B', base2:'#8A5A08', metal:'lapis', ink:'#1A1405', motif:'kanat', glass:['#2E1A06','#7A4B14','#3A2208'],
+  wish:'Сүйінші сұраймын!', wish_ru:'Прошу сүйінші — у меня добрая весть!',
+  rite:'Кто первым принёс добрую весть — о сватовстве, о возвращении путника, о приплоде в табуне, — восклицает «Сүйінші!», и хозяева одаривают его ценным подарком. Чем радостнее новость, тем щедрее награда. Обычай жив и сегодня.',
+  orn:'Құс қанат — крылья: птица в орнаменте означает свободу и счастье, здесь она несёт весть. Жёлтый (сары) — разум и мудрость, лазурь — небо, по которому летит новость.',
+  comp:'спирт этиловый ректификованный «Люкс», вода, настой полыни, чабреца и шиповника, сахар', pair:'сүр ет, қуырдақ'},
+ {id:'nauryz', name:'Наурыз', kk:'НАУРЫЗ', lat:'Nauryz', cat:'wine', group:'feast', bottle:'wine', vol:'0,75', abv:12, pack:6, price:6400,
+  type_kk:'АҚ ҚҰРҒАҚ ШАРАП', type_ru:'Вино белое сухое · Ркацители', base:'#2F6B35', base2:'#0F2C14', metal:'gold', ink:'#F1F5E6', motif:'sun', glass:['#3A5A2A','#C7D99A','#46682F'],
+  wish:'Ұлыстың ұлы күні құтты болсын!', wish_ru:'С великим днём народа!',
+  rite:'Праздник весеннего равноденствия, 22 марта, «великий день народа». Варят наурыз-көже из семи составляющих — на благополучие и изобилие в новом году, ходят друг к другу в гости, старшие благословляют младших. С 2016 года Наурыз в списке нематериального наследия ЮНЕСКО.',
+  orn:'Күн — солнце с двенадцатью лепестками-лучами, космогонический знак. По правилу «высоких» символов стоит только в верхней части этикетки. Зелёный (жасыл) — молодость и весна.',
+  comp:'виноград Ркацители (Алматинская обл.), консервант E220', pair:'қазы, балхашский сазан'},
+ {id:'shashu', name:'Шашу', kk:'ШАШУ', lat:'Şaşu', cat:'sparkling', group:'feast', bottle:'sparkling', vol:'0,75', abv:11.5, pack:6, price:7600,
+  type_kk:'КӨПІРШІКТІ ШАРАП · БРЮТ', type_ru:'Вино игристое брют', base:'#F2EADB', base2:'#D3C4A6', metal:'bronze', ink:'#16264A', motif:'shashu', light:true, glass:['#123020','#3E6B4A','#0E2418'],
+  wish:'Тойларың тойға ұлассын!', wish_ru:'Пусть праздники сменяют праздники!',
+  rite:'Шашу — осыпание сладостями, куртом и монетами: на свадьбе, при встрече невесты, при любом радостном событии. Собранное шашу берегут: считается, что оно приносит удачу и достаток. Пузырьки игристого — то же шашу, только в бокале.',
+  orn:'Россыпь ромбов и бусин вокруг ботакөз — падающее шашу. Белый (ақ) — чистота и светлые намерения.',
+  comp:'виноматериал Шардоне, экспедиционный ликёр, консервант E220', pair:'жент, шақ-шақ, баурсаки'}
+];
+P.forEach((p, i) => { p.n = i + 1; p.ean = ean13('4879026' + String(10 + i).padStart(5, '0')); });
+const METAL = {gold:'#D6AA4E', silver:'#C9CFD8', lapis:'#173C82', bronze:'#8E6A27'};
+
+/* ================= орнаменты ================= */
+const circ = (cx, cy, r) => `M${cx - r} ${cy} a${r} ${r} 0 1 0 ${2 * r} 0 a${r} ${r} 0 1 0 ${-2 * r} 0 Z`;
+const I = () => new DOMMatrix();
+const rot = a => new DOMMatrix().translate(50, 50).rotate(a).translate(-50, -50);
+const place = (s, tx, ty, a = 0) => new DOMMatrix().translate(50 + tx, 50 + ty).rotate(a).scale(s).translate(-50, -50);
+const set = (paths, m = I()) => paths.map(d => ({d, m}));
+const ring = (paths, n, m0 = I(), off = 0) => { const o = []; for (let i = 0; i < n; i++) { const m = rot(off + i * 360 / n).multiply(m0); paths.forEach(d => o.push({d, m})); } return o; };
+
+const D = {
+  ramL:'M50 88 C50 72 48 62 40 54 C30 44 16 46 15 58 C14 68 24 72 30 67 C35 62 31 55 25 57',
+  ramR:'M50 88 C50 72 52 62 60 54 C70 44 84 46 85 58 C86 68 76 72 70 67 C65 62 69 55 75 57',
+  bud:'M50 60 C43 48 46 36 50 28 C54 36 57 48 50 60 Z',
+  kV1:'M40 16 C35 38 35 62 40 84', kV2:'M60 16 C65 38 65 62 60 84',
+  spoke:'M50 8 L50 1',
+  foot:'M50 18 C33 18 24 34 27 52 C30 70 42 80 50 70 C58 80 70 70 73 52 C76 34 67 18 50 18 Z', footL:'M50 30 L50 62',
+  rhomb:'M50 40 L60 50 L50 60 L40 50 Z',
+  t1:'M50 14 L84 70 L16 70 Z', t2:'M50 30 L70 62 L30 62 Z', p1:'M30 70 L30 83', p2:'M50 70 L50 88', p3:'M70 70 L70 83',
+  wL1:'M50 62 C38 40 22 30 8 32 C22 42 34 54 42 70', wL2:'M48 66 C38 52 26 46 14 48 C26 54 34 62 40 74', wL3:'M46 70 C38 62 30 60 20 62 C30 66 36 72 40 80',
+  wR1:'M50 62 C62 40 78 30 92 32 C78 42 66 54 58 70', wR2:'M52 66 C62 52 74 46 86 48 C74 54 66 62 60 74', wR3:'M54 70 C62 62 70 60 80 62 C70 66 64 72 60 80',
+  body:'M50 50 C46 60 46 74 50 86 C54 74 54 60 50 50 Z', head:'M50 36 L55 43 L50 50 L45 43 Z',
+  kL:'M48 84 C34 74 26 54 34 26 C40 44 46 58 48 84 Z', kR:'M52 84 C66 74 74 54 66 26 C60 44 54 58 52 84 Z', kTop:'M50 28 L55 35 L50 42 L45 35 Z', kBase:'M30 86 C40 92 60 92 70 86',
+  dOut:'M50 22 L78 50 L50 78 L22 50 Z', dIn:'M50 34 L66 50 L50 66 L34 50 Z',
+  petal:'M50 34 C46 26 46 18 50 8 C54 18 54 26 50 34 Z',
+  drop:'M50 4 L54 10 L50 16 L46 10 Z',
+  corner:'M50 10 L90 50 L50 90 L10 50 Z'
+};
+const RAM = [D.ramL, D.ramR, D.bud];
+const MOTIFS = {
+  shanyrak:[...set([circ(50,50,42), circ(50,50,35), D.kV1, D.kV2]), ...set([D.kV1, D.kV2], rot(90)), ...ring([D.spoke], 24, I(), 7.5)],
+  ram:set(RAM),
+  kudalyk:[...set(RAM, place(.6,0,-20)), ...set(RAM, place(.6,0,20,180)), ...set(RAM, place(.42,-30,0,-90)), ...set(RAM, place(.42,30,0,90)), ...set([circ(50,50,3.2)])],
+  tuyetaban:[...ring([D.foot, D.footL], 4, place(.42,0,-27)), ...set([D.rhomb, circ(50,50,3)]), ...ring([circ(50,22,2.2)], 4, I(), 45)],
+  tumarsha:set([D.t1, D.t2, circ(50,52,4.5), D.p1, D.p2, D.p3, circ(30,86,2.4), circ(50,91.5,2.4), circ(70,86,2.4)]),
+  kanat:set([D.wL1, D.wL2, D.wL3, D.wR1, D.wR2, D.wR3, D.body, D.head]),
+  kustumsyk:set([D.kL, D.kR, D.kTop, D.kBase, circ(50,62,2.6)]),
+  botakoz:[...set([D.dOut, D.dIn, circ(50,50,6)]), ...ring(RAM, 4, place(.3,0,-36), 45)],
+  sun:[...set([circ(50,50,13), circ(50,50,7)]), ...ring([D.petal], 12), ...ring([circ(50,30,1.5)], 12, I(), 15)],
+  shashu:[...set([D.dOut, D.dIn, circ(50,50,5)].map(x => x), place(.62,0,0)), ...ring([D.drop], 8), ...ring([circ(50,14,2.4)], 8, I(), 22.5), ...ring([D.drop], 8, place(.5,0,-6), 22.5)],
+  corner:set([D.corner, circ(50,50,12)])
+};
+const mtx = m => `matrix(${[m.a,m.b,m.c,m.d,m.e,m.f].map(v => +v.toFixed(4)).join(' ')})`;
+const paths = (list, pl = true, flow = false) => list.map(({d, m}, i) => `<path d="${d}" transform="${mtx(m)}"${pl ? ' pathLength="1"' : ''}${flow ? ` style="--fd:${(-((i * 0.53) % 3.4)).toFixed(2)}s"` : ''}/>`).join('');
+const FLOW = {gold:'#FFF6DA', silver:'#FFFFFF', lapis:'#FFFFFF', bronze:'#C4472F'};
+/* эмблема в координатах 0..100: свечение + основной рисунок + бегущий по линиям свет */
+const emblem = (key, mt) => `<g class="glow" filter="url(#glow)" fill="none" stroke="${METAL[mt]}" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">${paths(MOTIFS[key], false)}</g>
+<g class="draw" fill="none" stroke="url(#mm-${mt})" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${paths(MOTIFS[key])}</g>
+<g class="flow" fill="none" stroke="${FLOW[mt]}" stroke-width="2.6" stroke-linecap="round">${paths(MOTIFS[key], true, true)}</g>`;
+
+/* ================= генераторы SVG ================= */
+let UID = 0;
+function labelSVG(p, attrs = '') {
+  const u = 'u' + (++UID), mt = p.metal, MG = `url(#mg-${mt})`, MM = `url(#mm-${mt})`, S = METAL[mt];
+  const fs = Math.min(40, Math.round(236 / (p.kk.length * 0.7)));
+  const cr = (x, y) => `<g transform="translate(${x} ${y}) scale(.13) translate(-50 -50)"><g class="cr" fill="none" stroke="${S}" stroke-width="6">${paths(MOTIFS.corner, false)}</g></g>`;
+  return `<svg ${attrs} viewBox="0 0 300 400" class="label" role="img" aria-label="Этикетка «${p.name}»: ${p.type_ru}, ${p.vol} л, ${p.abv}%">
+<defs><clipPath id="c${u}"><rect width="300" height="400" rx="16"/></clipPath>
+<radialGradient id="b${u}" cx=".5" cy=".38" r=".85"><stop offset="0" stop-color="${p.base}"/><stop offset="1" stop-color="${p.base2}"/></radialGradient></defs>
+<g clip-path="url(#c${u})">
+<rect width="300" height="400" fill="url(#b${u})"/>
+<rect width="300" height="400" fill="url(#felt)" opacity="${p.light ? .55 : .35}"/>
+<g transform="translate(150 165) scale(3.7) translate(-50 -50)" fill="none" stroke="${p.ink}" stroke-width=".5" opacity=".07">${paths(MOTIFS[p.motif], false)}</g>
+</g>
+<rect x="9" y="9" width="282" height="382" rx="11" fill="none" stroke="${MG}" stroke-width="1.6"/>
+<rect x="15.5" y="15.5" width="269" height="369" rx="7" fill="none" stroke="${MG}" stroke-width=".7" opacity=".7"/>
+${cr(16,16)}${cr(284,16)}${cr(16,384)}${cr(284,384)}
+<rect x="44" y="24" width="212" height="14" fill="url(#band-${mt})"/>
+<text x="150" y="61" text-anchor="middle" class="t-brand" fill="${MG}">ДӘСТҮР</text>
+<text x="150" y="74" text-anchor="middle" class="t-sub" fill="${p.ink}" opacity=".7">ТОЙ ЖИНАҒЫ · №${p.n}</text>
+<g transform="translate(150 158)"><g class="emb">
+<circle class="ripple" r="60" fill="none" stroke="${S}" stroke-width="1.2"/>
+<circle class="ripple r2" r="60" fill="none" stroke="${S}" stroke-width="1.2"/>
+<circle r="66" fill="none" stroke="${S}" stroke-width=".8" stroke-dasharray="1.5 4.5" class="spin"/>
+<circle r="71" fill="none" stroke="${S}" stroke-width=".7" stroke-dasharray="9 3 1.5 3" class="spin2"/>
+<circle r="59" fill="none" stroke="${MG}" stroke-width=".5" opacity=".65"/>
+<g transform="scale(1.06) translate(-50 -50)">${emblem(p.motif, mt)}</g>
+</g></g>
+<text x="150" y="262" text-anchor="middle" class="t-name" font-size="${fs}" fill="${p.ink}">${p.kk}</text>
+<text x="150" y="281" text-anchor="middle" class="t-lat" fill="${p.ink}" opacity=".72">${p.lat}</text>
+<rect x="62" y="295.6" width="74" height=".8" fill="${S}"/><rect x="164" y="295.6" width="74" height=".8" fill="${S}"/>
+<path d="M150 290 L156 296 L150 302 L144 296 Z" fill="none" stroke="${MG}" stroke-width="1"/>
+<text x="150" y="318" text-anchor="middle" class="t-type" fill="${p.ink}">${p.type_kk}</text>
+<text x="150" y="332" text-anchor="middle" class="t-ru" fill="${p.ink}" opacity=".82">${p.type_ru.split(' · ')[0]}</text>
+<text x="150" y="354" text-anchor="middle" class="t-wish" fill="${MG}">«${p.wish}»</text>
+<text x="36" y="375" class="t-meta" fill="${p.ink}">${p.vol} л</text>
+<text x="264" y="375" text-anchor="end" class="t-meta" fill="${p.ink}">${String(p.abv).replace('.', ',')}% об.</text>
+<circle cx="150" cy="372" r="11" fill="none" stroke="${S}" stroke-width="1"/>
+<text x="150" y="374.7" text-anchor="middle" class="t-age" fill="${p.ink}">18+</text>
+</svg>`;
+}
+
+const BOTTLES = {
+  vodka:{d:'M104 18 h32 v26 h-2 v96 c0 30 54 40 54 82 v312 c0 10 -8 16 -18 16 h-100 c-10 0 -18 -6 -18 -16 v-312 c0 -42 54 -52 54 -82 v-96 h-2 z', cap:[101,6,38,44], lx:58, ly:292, lw:124, hl:[62,230,10,300]},
+  cognac:{d:'M106 40 h28 v60 c0 20 70 40 70 90 v330 c0 14 -10 24 -24 24 h-120 c-14 0 -24 -10 -24 -24 v-330 c0 -50 70 -70 70 -90 z', cap:[101,20,38,36], lx:50, ly:278, lw:140, hl:[44,200,12,310]},
+  wine:{d:'M106 14 h28 v140 c0 40 50 46 50 96 v280 c0 10 -8 16 -18 16 h-92 c-10 0 -18 -6 -18 -16 v-280 c0 -50 50 -56 50 -96 z', cap:[103,8,34,74], lx:62, ly:326, lw:116, hl:[62,260,10,260]},
+  sparkling:{d:'M108 14 h24 v80 c0 60 58 70 58 150 v270 c0 12 -9 18 -20 18 h-100 c-11 0 -20 -6 -20 -18 v-270 c0 -80 58 -90 58 -150 z', cap:[104,6,32,128], lx:58, ly:300, lw:124, hl:[56,250,10,260]},
+  bitter:{d:'M108 30 h24 v50 c0 16 56 14 56 44 v400 c0 10 -8 16 -18 16 h-100 c-10 0 -18 -6 -18 -16 v-400 c0 -30 56 -28 56 -44 z', cap:[104,12,32,34], lx:58, ly:236, lw:124, hl:[58,135,10,380]}
+};
+function bottleSVG(p) {
+  const u = 'b' + (++UID), B = BOTTLES[p.bottle], [g1, g2, g3] = p.glass, lh = B.lw * 4 / 3;
+  const [cx, cy, cw, ch] = B.cap, [hx, hy, hw, hh] = B.hl;
+  return `<svg viewBox="0 0 240 570" class="bottle" role="img" aria-label="Бутылка «${p.name}», ${p.vol} л">
+<defs><linearGradient id="g${u}" x1="0" x2="1"><stop offset="0" stop-color="${g1}"/><stop offset=".45" stop-color="${g2}"/><stop offset="1" stop-color="${g3}"/></linearGradient>
+<clipPath id="k${u}"><path d="${B.d}"/></clipPath>
+<linearGradient id="s${u}" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".18" stop-color="#000" stop-opacity="0"/><stop offset=".32" stop-color="#fff" stop-opacity=".16"/><stop offset=".42" stop-color="#fff" stop-opacity="0"/><stop offset=".8" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient></defs>
+<ellipse cx="120" cy="558" rx="86" ry="7" fill="#000" opacity=".5"/>
+<path d="${B.d}" fill="url(#g${u})" opacity=".96"/>
+<g clip-path="url(#k${u})"><rect x="${hx}" y="${hy}" width="${hw}" height="${hh}" rx="5" fill="#fff" opacity=".22"/><rect x="${hx + 16}" y="${hy + 20}" width="3" height="${hh - 40}" rx="1.5" fill="#fff" opacity=".18"/><rect x="0" y="0" width="240" height="570" fill="url(#s${u})" opacity=".6"/></g>
+<rect x="${cx}" y="${cy}" width="${cw}" height="${ch}" rx="4" fill="url(#mg-${p.metal})"/>
+<rect x="${cx}" y="${cy + ch - 6}" width="${cw}" height="2" fill="#000" opacity=".25"/>
+${labelSVG(p, `x="${B.lx}" y="${B.ly}" width="${B.lw}" height="${lh}"`)}
+<rect x="${B.lx}" y="${B.ly}" width="${B.lw}" height="${lh}" rx="${B.lw * 16 / 300}" fill="url(#s${u})" pointer-events="none"/>
+</svg>`;
+}
+
+function ean13(d12) {
+  let s = 0; [...d12].forEach((c, i) => s += +c * (i % 2 ? 3 : 1));
+  return d12 + ((10 - s % 10) % 10);
+}
+function barcodeSVG(code) {
+  const L = ['0001101','0011001','0010011','0111101','0100011','0110001','0101111','0111011','0110111','0001011'];
+  const R = L.map(c => [...c].map(b => b === '1' ? '0' : '1').join(''));
+  const G = R.map(c => [...c].reverse().join(''));
+  const PAR = ['LLLLLL','LLGLGG','LLGGLG','LLGGGL','LGLLGG','LGGLLG','LGGGLL','LGLGLG','LGLGGL','LGGLGL'];
+  const d = [...code].map(Number), par = PAR[d[0]];
+  let bits = '101';
+  for (let i = 1; i <= 6; i++) bits += (par[i - 1] === 'L' ? L : G)[d[i]];
+  bits += '01010';
+  for (let i = 7; i <= 12; i++) bits += R[d[i]];
+  bits += '101';
+  const guard = new Set([0,1,2,45,46,47,48,49,92,93,94]);
+  let bars = '';
+  [...bits].forEach((b, i) => { if (b === '1') bars += `<rect x="${i + 9}" y="2" width="1" height="${guard.has(i) ? 50 : 45}"/>`; });
+  return `<svg viewBox="0 0 113 60" role="img" aria-label="Штрихкод EAN-13 ${code}"><g fill="#111">${bars}</g>
+<g font-family="Golos Text, sans-serif" font-size="7.5" fill="#111" text-anchor="middle"><text x="4" y="57">${code[0]}</text><text x="31" y="56">${code.slice(1,7)}</text><text x="78" y="56">${code.slice(7)}</text></g></svg>`;
+}
+
+function backHTML(p) {
+  const wine = p.cat === 'wine' || p.cat === 'sparkling';
+  const bb = p.light ? p.base : '#F2EADB', bi = p.light ? p.ink : '#1F1A12';
+  return `<div class="back" style="--bb:${bb};--bi:${bi};--bm:${METAL[p.metal]}">
+<div class="bh">ДӘСТҮР · №${p.n}</div>
+<div class="bkk">${p.name} — ${p.type_kk.toLowerCase()}</div>
+<div><b>Құрамы / Состав:</b> ${p.comp}.</div>
+<div><b>Көлемі / Объём:</b> ${p.vol} л · <b>Күші / Крепость:</b> ${String(p.abv).replace('.', ',')}% об.</div>
+${wine ? '<div><b>Құйылған күні / Дата розлива:</b> указана на бутылке.</div>' : ''}
+<div><b>Өндіруші / Изготовитель:</b> ТОО «Дәстүр» (концепт), Алматы, Қазақстан.</div>
+<div><b>Дастарханға / К столу:</b> ${p.pair}.</div>
+<div class="bkk">«${p.wish}» — ${p.wish_ru.toLowerCase()}</div>
+<svg viewBox="0 0 220 14" style="width:100%;height:12px;background:none;padding:0" aria-hidden="true"><rect width="220" height="14" fill="url(#band-${p.metal === 'silver' ? 'gold' : p.metal})"/></svg>
+<div class="warn">Алкогольді шамадан тыс тұтыну денсаулығыңызға зиян.<br>Чрезмерное употребление алкоголя вредит вашему здоровью.</div>
+<div class="brow">${barcodeSVG(p.ean)}<div class="ukm">Место для УКМ / ҚБМ орны</div><div class="age">18+</div></div>
+</div>`;
+}
+
+/* ================= заявка ================= */
+let order = {};
+try { order = JSON.parse(localStorage.getItem('dastur-order') || '{}') || {}; } catch (e) { order = {}; }
+const saveOrder = () => { try { localStorage.setItem('dastur-order', JSON.stringify(order)); } catch (e) {} };
+const qtyHTML = p => `<button type="button" data-q="-1" data-id="${p.id}" aria-label="Убрать коробку «${p.name}»">−</button><output data-out="${p.id}" aria-live="polite">${order[p.id] || 0} кор.</output><button type="button" data-q="1" data-id="${p.id}" aria-label="Добавить коробку «${p.name}»">+</button>`;
+function setQty(id, delta) {
+  const v = Math.max(0, (order[id] || 0) + delta);
+  if (v) order[id] = v; else delete order[id];
+  saveOrder();
+  $$(`[data-out="${id}"]`).forEach(o => o.textContent = `${v} кор.`);
+  renderOrderBar();
+}
+function totals() {
+  let boxes = 0, bottles = 0, sum = 0;
+  const rows = P.filter(p => order[p.id]).map(p => { const b = order[p.id], n = b * p.pack, s = n * p.price; boxes += b; bottles += n; sum += s; return {p, b, n, s}; });
+  return {rows, boxes, bottles, sum};
+}
+function renderOrderBar() {
+  const t = totals();
+  $('#obar').hidden = t.boxes === 0;
+  $('#oBoxes').textContent = fmt(t.boxes); $('#oBottles').textContent = fmt(t.bottles); $('#oSum').textContent = fmt(t.sum) + ' ₸';
+}
+function renderOrder() {
+  const t = totals();
+  $('#oBody').innerHTML = t.rows.map(r => `<tr><td>${r.p.name} · ${r.p.vol} л</td><td>${r.b}</td><td>${r.n}</td><td>${fmt(r.s)}</td></tr>`).join('') || '<tr><td colspan="4" style="text-align:left;color:var(--felt-3)">Добавьте коробки в каталоге кнопкой «+».</td></tr>';
+  $('#oFBox').textContent = fmt(t.boxes); $('#oFBot').textContent = fmt(t.bottles); $('#oFSum').textContent = fmt(t.sum);
+  const d = new Date().toLocaleDateString('ru-RU');
+  $('#orderText').value = `Заявка «Дәстүр», коллекция «Той» — ${d}\n` + t.rows.map(r => `• ${r.p.name} (${CATS[r.p.cat].toLowerCase()}, ${r.p.vol} л) — ${r.b} кор. × ${r.p.pack} = ${r.n} бут., ${fmt(r.s)} ₸`).join('\n') + `\nИтого: ${t.boxes} кор., ${t.bottles} бут., ${fmt(t.sum)} ₸`;
+}
+
+/* ================= каталог ================= */
+const state = {cat:'all', group:'all'};
+function renderFilters() {
+  const mk = (key, val, label) => `<button type="button" class="chip" data-k="${key}" data-v="${val}" aria-pressed="${state[key] === val}">${label}</button>`;
+  $('#fCat').innerHTML = mk('cat', 'all', 'Все') + Object.entries(CATS).map(([k, v]) => mk('cat', k, v)).join('');
+  $('#fGroup').innerHTML = mk('group', 'all', 'Любой повод') + Object.entries(GROUPS).map(([k, v]) => mk('group', k, v[0])).join('');
+}
+function renderCatalog() {
+  $('#groups').innerHTML = Object.entries(GROUPS).map(([g, [title, sub]]) => `
+  <div class="group" data-group="${g}">
+    <div class="group-h"><h3>${title}</h3><span>${sub}</span></div>
+    <div class="grid">${P.filter(p => p.group === g).map(p => `
+      <article class="card" data-id="${p.id}" data-cat="${p.cat}">
+        <button type="button" class="sample" data-open="${p.id}" aria-label="Открыть «${p.name}»"><div class="tilt">${labelSVG(p)}<span class="foil"></span></div></button>
+        <div class="c-head"><h3 class="c-name">${p.name}</h3><span class="c-cat">${CATS[p.cat]}</span></div>
+        <p class="c-type">${p.type_ru}</p>
+        <dl class="c-spec"><div><dt>Объём</dt><dd>${p.vol} л</dd></div><div><dt>Крепость</dt><dd>${String(p.abv).replace('.', ',')}%</dd></div><div><dt>В коробке</dt><dd>${p.pack} бут.</dd></div></dl>
+        <div class="c-foot"><div class="price">${fmt(p.price)} ₸<small>за бутылку, опт</small></div><div class="qty">${qtyHTML(p)}</div></div>
+        <button type="button" class="more" data-open="${p.id}">Легенда обряда и контрэтикетка →</button>
+      </article>`).join('')}</div>
+  </div>`).join('');
+  runDraw($('#groups'));
+}
+function applyFilters() {
+  $$('.card').forEach(c => { const p = P.find(x => x.id === c.dataset.id); c.hidden = !((state.cat === 'all' || p.cat === state.cat) && (state.group === 'all' || p.group === state.group)); });
+  $$('.group').forEach(g => g.hidden = !$$('.card', g).some(c => !c.hidden));
+  $$('.chip').forEach(b => b.setAttribute('aria-pressed', state[b.dataset.k] === b.dataset.v));
+}
+function runDraw(root, base = 0) {
+  if (RM) return;
+  $$('.draw', root).forEach((g, gi) => {
+    g.classList.remove('run'); void g.getBoundingClientRect();
+    $$('path', g).forEach((p, i) => p.style.setProperty('--d', (base + gi * .08 + i * .035).toFixed(3) + 's'));
+    g.classList.add('run');
+  });
+}
+
+/* лексикон и палитра */
+const LEX = [
+  ['ram','Қошқар мүйіз','бараний рог','Богатство, достаток, сила рода. Его называют «отцом» казахских орнаментов: на нём построены многие другие узоры.','Құдалық, бордюр всех этикеток'],
+  ['tuyetaban','Түйе табан','след верблюда','Дорога и движение, выносливость, долгий путь и жизненный опыт.','Қонақасы'],
+  ['botakoz','Ботакөз','глаз верблюжонка','Удача и защита от сглаза; этим узором обрамляли края изделий.','Қыз ұзату, Шашу'],
+  ['kustumsyk','Құстұмсық','клюв птицы','Семейный узор. Клюв, направленный вверх, означает, что в новой семье невестку ценят и любят.','Беташар'],
+  ['tumarsha','Тұмарша','амулет','Треугольный оберег, защищающий человека от бед и злых духов.','Ерулік'],
+  ['kanat','Құс қанат','крыло птицы','Птица в орнаменте связана со свободой и счастьем; на этикетке крылья несут добрую весть.','Сүйінші'],
+  ['sun','Күн','солнце','Космогонический знак. «Высокие» символы мироздания не наносят на обувь и подолы, только на верх вещи.','Наурыз'],
+  ['shanyrak','Шаңырақ','венец юрты','Дом, род, преемственность. Святыня семьи: её не кладут туда, где ходят.','Шаңырақ']
+];
+function motifSVG(key, metal = 'gold', size = 96) {
+  return `<svg class="motif" viewBox="-4 -4 108 108" width="${size}" height="${size}" aria-hidden="true"><g transform="translate(50 50)"><g class="emb">
+<circle class="ripple" r="46" fill="none" stroke="${METAL[metal]}" stroke-width="1"/><circle class="ripple r2" r="46" fill="none" stroke="${METAL[metal]}" stroke-width="1"/>
+<circle class="spin2" r="53" fill="none" stroke="${METAL[metal]}" stroke-width=".7" stroke-dasharray="7 3 1.5 3"/>
+<g transform="translate(-50 -50)">${emblem(key, metal)}</g></g></g></svg>`;
+}
+const dotSVG = key => `<svg viewBox="-4 -4 108 108" aria-hidden="true"><g fill="none" stroke="#D6AA4E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">${paths(MOTIFS[key], false)}</g></svg>`;
+function renderLex() {
+  $('#lex').innerHTML = LEX.map(([k, kk, ru, txt, use]) => `<div class="lex-i">${motifSVG(k)}<h3>${kk}</h3><div class="ru">${ru}</div><p>${txt}</p><div class="use">На этикетке: ${use}</div></div>`).join('');
+  const PAL = [['Көк','#1D4C9C','небо, дух, бесконечность'],['Ақ','#F2EADB','чистота и правда'],['Қызыл','#A8432C','огонь, солнце, жизненная сила'],['Сары','#D9A21B','разум и мудрость'],['Жасыл','#2F6B35','молодость, весна, обновление'],['Қара','#0A1424','земля; в паре с белым — классика кочевья']];
+  $('#pal').innerHTML = PAL.map(([n, c, t]) => `<div class="sw"><i style="background:${c}"></i><b>${n}</b><span>${t}</span></div>`).join('');
+}
+
+/* ================= модальное окно ================= */
+let cur = 0, view = 'label';
+function openItem(i, pushHash = true) {
+  cur = (i + P.length) % P.length; const p = P[cur];
+  $('#shStage').style.setProperty('--glow', p.base + '88');
+  $('#shCat').textContent = `№${p.n} · ${CATS[p.cat]} · ${GROUPS[p.group][0]}`;
+  $('#shName').textContent = p.name;
+  $('#shLat').textContent = p.lat;
+  $('#shWish').innerHTML = `«${p.wish}»<small>${p.wish_ru}</small>`;
+  $('#shRite').textContent = p.rite;
+  $('#shOrn').textContent = p.orn;
+  $('#shSpecs').innerHTML = [['Категория', p.type_ru], ['Объём · крепость', `${p.vol} л · ${String(p.abv).replace('.', ',')}%`], ['Коробка', `${p.pack} бут.`], ['Цена опт', `${fmt(p.price)} ₸ / бут.`], ['К столу', p.pair], ['EAN-13', p.ean]].map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join('');
+  $('#shQty').innerHTML = qtyHTML(p);
+  renderView();
+  const dlg = $('#dlg'); if (!dlg.open) dlg.showModal();
+  if (pushHash && location.hash !== '#' + p.id) { try { history.replaceState(null, '', '#' + p.id); } catch (e) {} }
+}
+function renderView() {
+  const p = P[cur], v = $('#shView');
+  $$('.seg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === view));
+  if (view === 'label') v.innerHTML = `<div class="tilt live">${labelSVG(p)}<span class="foil" style="opacity:.7"></span></div>`;
+  else if (view === 'bottle') v.innerHTML = `<div class="bottle-w live">${bottleSVG(p)}</div>`;
+  else v.innerHTML = backHTML(p);
+  runDraw(v);
+}
+function closeDlg(d) {
+  d.close();
+}
+$('#dlg').addEventListener('close', () => { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {} });
+$$('.seg button').forEach(b => b.addEventListener('click', () => { view = b.dataset.v; renderView(); }));
+$('#shPrev').addEventListener('click', () => openItem(cur - 1));
+$('#shNext').addEventListener('click', () => openItem(cur + 1));
+$$('dialog').forEach(d => {
+  d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) closeDlg(d); });
+});
+$('#shView').addEventListener('pointermove', e => {
+  if (!HOVER) return;
+  const r = e.currentTarget.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+  const t = $('.tilt, .bottle-w', e.currentTarget); if (!t) return;
+  t.style.setProperty('--ry', ((x - .5) * 22).toFixed(1) + 'deg');
+  t.style.setProperty('--rx', ((.5 - y) * 14).toFixed(1) + 'deg');
+  t.style.setProperty('--mx', (x * 100).toFixed(0) + '%'); t.style.setProperty('--my', (y * 100).toFixed(0) + '%');
+  t.style.setProperty('--px', ((x - .5) * 2).toFixed(2)); t.style.setProperty('--py', ((y - .5) * 2).toFixed(2));
+});
+
+/* ================= презентация ================= */
+let pi = 0;
+const pres = $('#pres');
+function renderPres(dir = 0) {
+  const p = P[pi];
+  $('#presMain').style.setProperty('--glow', p.base + '99');
+  $('#presLabel').innerHTML = labelSVG(p) + '<span class="foil" style="opacity:.8"></span>';
+  $('#presR').innerHTML = `<div class="pres-n">${String(p.n).padStart(2, '0')} / ${String(P.length).padStart(2, '0')} · ${CATS[p.cat].toUpperCase()} · ${p.vol} Л · ${String(p.abv).replace('.', ',')}%</div>
+    <h2 class="pres-name">${p.name}</h2>
+    <p class="wish">«${p.wish}»<small>${p.wish_ru}</small></p>
+    <p>${p.rite}</p>
+    <p style="color:var(--felt-3)">${p.orn}</p>
+    <div class="price">${fmt(p.price)} ₸<small>за бутылку, опт · коробка ${p.pack} бут.</small></div>`;
+  $$('#presDots button').forEach((b, i) => b.setAttribute('aria-current', i === pi));
+  $('#presProg').style.width = ((pi + 1) / P.length * 100) + '%';
+  $('#presMain').scrollTop = 0;
+  runDraw($('#presLabel'));
+  if (!RM && dir) {
+    $('#presR').animate([{opacity:0, transform:`translateX(${dir * 48}px)`}, {opacity:1, transform:'none'}], {duration:650, easing:'cubic-bezier(.2,.8,.2,1)'});
+    $('#presLabel').animate([{opacity:0, transform:`rotateY(${dir * -40}deg) scale(.9)`}, {opacity:1, transform:'none'}], {duration:850, easing:'cubic-bezier(.2,.8,.2,1)'});
+  }
+}
+function openPres(start = 0) {
+  $('#presDots').innerHTML = P.map((p, i) => `<button type="button" aria-label="${p.name}" data-pi="${i}">${dotSVG(p.motif)}</button>`).join('');
+  pi = start; pres.hidden = false; document.body.style.overflow = 'hidden';
+  renderPres(); $('#pNext').focus({preventScroll:true});
+  try { const r = pres.requestFullscreen && pres.requestFullscreen(); if (r && r.catch) r.catch(() => {}); } catch (e) {}
+}
+function closePres() {
+  pres.hidden = true; document.body.style.overflow = '';
+  try { if (document.fullscreenElement) { const r = document.exitFullscreen(); if (r && r.catch) r.catch(() => {}); } } catch (e) {}
+  $('#presBtn').focus({preventScroll:true});
+}
+const presGo = d => { pi = (pi + d + P.length) % P.length; renderPres(d); };
+$('#presBtn').addEventListener('click', () => openPres());
+$('#presBtn2').addEventListener('click', () => openPres());
+$('#pClose').addEventListener('click', closePres);
+$('#pPrev').addEventListener('click', () => presGo(-1));
+$('#pNext').addEventListener('click', () => presGo(1));
+$('#presDots').addEventListener('click', e => { const b = e.target.closest('[data-pi]'); if (!b) return; const n = +b.dataset.pi; if (n === pi) return; const d = n > pi ? 1 : -1; pi = n; renderPres(d); });
+document.addEventListener('keydown', e => {
+  if (!pres.hidden) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && !e.target.closest('button'))) { e.preventDefault(); presGo(1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); presGo(-1); }
+    else if (e.key === 'Escape') { e.preventDefault(); closePres(); }
+  } else if ($('#dlg').open) { if (e.key === 'ArrowRight') openItem(cur + 1); if (e.key === 'ArrowLeft') openItem(cur - 1); }
+});
+let sw = null;
+$('#presMain').addEventListener('pointerdown', e => { sw = {x:e.clientX, y:e.clientY}; });
+$('#presMain').addEventListener('pointerup', e => {
+  if (!sw) return; const dx = e.clientX - sw.x, dy = e.clientY - sw.y; sw = null;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) presGo(dx < 0 ? 1 : -1);
+});
+$('.pres-l').addEventListener('pointermove', e => {
+  if (!HOVER) return;
+  const r = e.currentTarget.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height, t = $('#presLabel');
+  t.style.setProperty('--ry', ((x - .5) * 20).toFixed(1) + 'deg'); t.style.setProperty('--rx', ((.5 - y) * 12).toFixed(1) + 'deg');
+  t.style.setProperty('--mx', (x * 100).toFixed(0) + '%'); t.style.setProperty('--my', (y * 100).toFixed(0) + '%');
+  t.style.setProperty('--px', ((x - .5) * 2).toFixed(2)); t.style.setProperty('--py', ((y - .5) * 2).toFixed(2));
+});
+
+/* ================= делегирование ================= */
+document.addEventListener('click', e => {
+  const q = e.target.closest('[data-q]'); if (q) { setQty(q.dataset.id, +q.dataset.q, e); return; }
+  const o = e.target.closest('[data-open]'); if (o) { view = 'label'; openItem(P.findIndex(p => p.id === o.dataset.open)); return; }
+  const c = e.target.closest('.chip'); if (c) { state[c.dataset.k] = c.dataset.v; applyFilters(); runDraw($('#groups')); }
+});
+$('#oOpen').addEventListener('click', () => { renderOrder(); $('#order').showModal(); });
+let clearArmed = false;
+$('#oClear').addEventListener('click', e => {
+  if (!clearArmed) { clearArmed = true; e.currentTarget.textContent = 'Точно очистить?'; setTimeout(() => { clearArmed = false; $('#oClear').textContent = 'Очистить'; }, 3000); return; }
+  order = {}; saveOrder(); $$('[data-out]').forEach(o => o.textContent = '0 кор.'); renderOrder(); renderOrderBar(); clearArmed = false; e.currentTarget.textContent = 'Очистить'; $('#order').close(); toast('Заявка очищена');
+});
+$('#oCopy').addEventListener('click', () => {
+  const t = $('#orderText');
+  navigator.clipboard.writeText(t.value).then(() => toast('Заявка скопирована')).catch(() => { t.focus(); t.select(); toast('Текст выделен — скопируйте его'); });
+});
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('on'), 2200); }
+
+/* наклон, фольга и параллакс эмблемы на карточках */
+if (HOVER) {
+  document.addEventListener('pointermove', e => {
+    const s = e.target.closest?.('.sample'); if (!s) return;
+    const r = s.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height, t = s.firstElementChild;
+    t.style.setProperty('--ry', ((x - .5) * 18).toFixed(1) + 'deg'); t.style.setProperty('--rx', ((.5 - y) * 12).toFixed(1) + 'deg');
+    t.style.setProperty('--mx', (x * 100).toFixed(0) + '%'); t.style.setProperty('--my', (y * 100).toFixed(0) + '%');
+    t.style.setProperty('--px', ((x - .5) * 2).toFixed(2)); t.style.setProperty('--py', ((y - .5) * 2).toFixed(2));
+  });
+  document.addEventListener('pointerout', e => { const s = e.target.closest?.('.sample'); if (s && !s.contains(e.relatedTarget)) { const t = s.firstElementChild; ['--rx','--ry'].forEach(k => t.style.setProperty(k, '0deg')); ['--px','--py'].forEach(k => t.style.setProperty(k, '0')); } });
+}
+
+/* ================= текстура войлока ================= */
+(function felt() {
+  const c = document.createElement('canvas'); c.width = c.height = 128; const x = c.getContext('2d'), im = x.createImageData(128, 128);
+  for (let i = 0; i < im.data.length; i += 4) { const v = 128 + (Math.random() - .5) * 120; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 60 + Math.random() * 60; }
+  x.putImageData(im, 0, 0);
+  x.globalAlpha = .08; x.strokeStyle = '#fff';
+  for (let i = 0; i < 90; i++) { x.beginPath(); const a = Math.random() * 128, b = Math.random() * 128; x.moveTo(a, b); x.quadraticCurveTo(a + Math.random() * 20 - 10, b + Math.random() * 20 - 10, a + Math.random() * 30 - 15, b + Math.random() * 30 - 15); x.stroke(); }
+  $('#feltImg').setAttribute('href', c.toDataURL());
+})();
+
+/* ================= герой: золотая пыль собирается в орнаменты ================= */
+(function hero() {
+  const cv = $('#hero'), cx = cv.getContext('2d'), cap = $('#morphCap'), stage = $('#stage');
+  const SEQ = [
+    ['shanyrak','Шаңырақ','венец юрты — символ дома и рода'],
+    ['ram','Қошқар мүйіз','бараний рог — достаток и сила рода'],
+    ['tuyetaban','Түйе табан','след верблюда — путь и выносливость'],
+    ['kanat','Құс қанат','крылья — свобода и добрая весть'],
+    ['sun','Күн','солнце — весна, Наурыз'],
+    ['botakoz','Ботакөз','глаз верблюжонка — удача и оберег']
+  ];
+  const N = innerWidth < 600 ? 1600 : 2600, S = 300;
+  const off = document.createElement('canvas'); off.width = off.height = S; const ox = off.getContext('2d', {willReadFrequently:true});
+  const cache = {};
+  function targets(key) {
+    if (cache[key]) return cache[key];
+    ox.setTransform(1, 0, 0, 1, 0, 0); ox.clearRect(0, 0, S, S);
+    const k = S / 100 * .9; ox.setTransform(k, 0, 0, k, S * .05, S * .05);
+    ox.lineWidth = 1.7; ox.lineCap = 'round'; ox.lineJoin = 'round'; ox.strokeStyle = '#fff';
+    MOTIFS[key].forEach(({d, m}) => { const p = new Path2D(); p.addPath(new Path2D(d), m); ox.stroke(p); });
+    const data = ox.getImageData(0, 0, S, S).data, pts = [];
+    for (let y = 0; y < S; y += 2) for (let x = 0; x < S; x += 2) if (data[(y * S + x) * 4 + 3] > 120) pts.push([x / S, y / S]);
+    for (let i = pts.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [pts[i], pts[j]] = [pts[j], pts[i]]; }
+    const out = []; for (let i = 0; i < N; i++) out.push(pts[i % pts.length]);
+    return cache[key] = out;
+  }
+  let W = 0, H = 0, dpr = 1;
+  function size() { dpr = Math.min(2, devicePixelRatio || 1); const r = stage.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; cx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+  size(); addEventListener('resize', size);
+  const golds = ['#F4D88E', '#D6AA4E', '#FFF1C8', '#B8893A', '#E8C26A'];
+  const ps = Array.from({length:N}, (_, i) => ({x:Math.random(), y:-Math.random() * .6, vx:0, vy:0, c:golds[i % golds.length], s:1.3 + Math.random() * 1.7, tw:Math.random() * 6.28}));
+  let si = 0, tgt = targets(SEQ[0][0]), mouse = {x:-9, y:-9}, t0 = performance.now(), visible = true;
+  function setShape(i) {
+    si = i; tgt = targets(SEQ[i][0]);
+    cap.innerHTML = `<b>${SEQ[i][1]}</b>${SEQ[i][2]}`;
+    if (!RM) ps.forEach(p => { p.vx += (Math.random() - .5) * .02; p.vy += (Math.random() - .5) * .02 - .006; });
+  }
+  cv.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mouse.x = (e.clientX - r.left) / r.width; mouse.y = (e.clientY - r.top) / r.height; });
+  cv.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9; });
+  cv.addEventListener('click', () => setShape((si + 1) % SEQ.length));
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible && !RM) requestAnimationFrame(frame); }).observe(stage);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && visible && !RM) requestAnimationFrame(frame); });
+  function draw(t) {
+    cx.clearRect(0, 0, W, H);
+    cx.globalCompositeOperation = 'lighter';
+    const sway = RM ? 0 : Math.sin(t / 4000) * .05;
+    const cs = Math.cos(sway), sn = Math.sin(sway);
+    for (const p of ps) {
+      const dx = p.x - .5, dy = p.y - .5;
+      const X = (.5 + dx * cs - dy * sn) * W, Y = (.5 + dx * sn + dy * cs) * H;
+      const tw = RM ? 1 : .55 + .45 * Math.sin(t / 400 + p.tw);
+      cx.globalAlpha = tw; cx.fillStyle = p.c; cx.fillRect(X, Y, p.s, p.s);
+    }
+    cx.globalAlpha = 1; cx.globalCompositeOperation = 'source-over';
+  }
+  let last = 0;
+  function frame(t) {
+    if (!visible || document.hidden) return;
+    if (t - t0 > 6200) { t0 = t; setShape((si + 1) % SEQ.length); }
+    for (let i = 0; i < N; i++) {
+      const p = ps[i], g = tgt[i];
+      p.vx += (g[0] - p.x) * .012; p.vy += (g[1] - p.y) * .012;
+      const mx = p.x - mouse.x, my = p.y - mouse.y, d2 = mx * mx + my * my;
+      if (d2 < .012) { const f = (.012 - d2) * .5; p.vx += mx * f * 8; p.vy += my * f * 8; }
+      p.vx *= .86; p.vy *= .86; p.x += p.vx; p.y += p.vy;
+    }
+    draw(t); last = t;
+    requestAnimationFrame(frame);
+  }
+  if (RM) { ps.forEach((p, i) => { p.x = tgt[i][0]; p.y = tgt[i][1]; }); draw(0); }
+  else requestAnimationFrame(frame);
+})();
+
+/* ================= запуск ================= */
+renderFilters(); renderCatalog(); renderLex(); renderOrderBar(); applyFilters(); runDraw($('#lex'), .3);
+if (RM) { try { $('#defs').pauseAnimations(); } catch (e) {} }
+function route() { const id = location.hash.slice(1); const i = P.findIndex(p => p.id === id); if (i >= 0) { view = 'label'; openItem(i, false); } }
+addEventListener('hashchange', route); route();
+})();
+</script>
+</body>
+</html>
