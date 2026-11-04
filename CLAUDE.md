@@ -18,13 +18,19 @@
 - Презентация — фиксированный слой `#pres` (не `<dialog>`): fullscreen запрашивается на нём самом.
   Если перевести в fullscreen весь документ, он перекроет слайды.
 
+## Страница предложения
+- `offer.html` — коммерческое предложение для покупателей (адрес /offer). Собирается из исходника
+  с картинками этикеток в data URI; при правке каталога снимите этикетки заново.
+- Контакты продавца: Руслан Имаканов, +7 707 611 30 75, imakanovr@gmail.com. Цена — «по запросу».
+- `sales/` (база покупателей, письма) в git не добавлять: репозиторий публичный.
+
 ## Хостинг и деплой
 - Cloudflare Worker **`alco`** (аккаунт imakanovr), адрес https://alco.imakanovr.workers.dev.
   Worker отдаёт статику через binding `ASSETS` и добавляет заголовки `X-Robots-Tag: noindex`,
   `nosniff`, `Referrer-Policy`. Wrangler и Workers Builds не настроены: push в GitHub сам не деплоит.
 - Деплой через MCP Cloudflare (`execute`), без токена аккаунта в песочнице:
-  1) `POST /accounts/{id}/workers/scripts/alco/assets-upload-session` с манифестом
-     `{"/index.html": {hash, size}}` (hash — первые 32 hex от sha256(base64(файл) + "html"));
+  1) `POST /accounts/{id}/workers/scripts/alco/assets-upload-session` с манифестом ВСЕХ файлов
+     (`/index.html`, `/offer.html`): `{путь: {hash, size}}` (hash — первые 32 hex от sha256(base64(файл) + "html"));
   2) из песочницы `POST https://api.cloudflare.com/client/v4/accounts/{id}/workers/assets/upload?base64=true`
      с JWT сессии, поле формы = hash, значение = base64 файла (`curl -F "<hash>=<idx.b64;type=text/html"`);
   3) `PUT /accounts/{id}/workers/scripts/alco` (multipart: metadata с `assets.jwt` = токен завершения,
